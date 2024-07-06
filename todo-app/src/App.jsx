@@ -21,11 +21,15 @@ function App() {
     );
   };
 
+  const deleteTodo = (id) => {
+    setTodos(todos.filter(todo => todo.id !== id));
+  };
+
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Todo List</h1>
       <TodoForm addTodo={addTodo} />
-      <Todos todos={todos} toggleTodo={toggleTodo} />
+      <Todos todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
     </div>
   );
 }
