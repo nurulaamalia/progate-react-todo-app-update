@@ -12,21 +12,28 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
 };
 
 const styles = {
-  todoItem: {
-    border: '2px solid #f4f4f4',
-    fontSize: '24px',
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    padding: '10px',
-  },
-  button: {
-    background: 'red',
-    color: 'white',
-    border: 'none',
-    padding: '5px 10px',
-    cursor: 'pointer',
-  },
-};
+    todoItem: {
+      border: '2px solid #f4f4f4',
+      fontSize: '24px',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      padding: '10px',
+      marginBottom: '10px',
+      borderRadius: '5px',
+      backgroundColor: '#fff',
+      boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
+    },
+    
+    button: {
+      backgroundColor: '#dc3545',
+      color: 'white',
+      border: 'none',
+      padding: '5px 10px',
+      cursor: 'pointer',
+      borderRadius: '5px',
+    },
+  };
+  
 
 export default TodoItem;

@@ -38,9 +38,13 @@ const styles = {
   container: {
     textAlign: 'center',
     padding: '12px',
+    fontFamily: 'Arial, sans-serif',
+    backgroundColor: '#f4f4f4',
+    minHeight: '100vh',
   },
   title: {
     fontSize: '36px',
+    color: '#333',
   },
 };
 
