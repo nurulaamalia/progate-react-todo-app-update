@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Todos from './components/Todos';
+import TodoForm from './components/TodoForm';
 
 function App() {
   const [todos, setTodos] = useState([
@@ -8,9 +9,15 @@ function App() {
     { id: 3, title: 'Study React with Ninja Ken', completed: false },
   ]);
 
+  const addTodo = (todo) => {
+    setTodos([...todos, todo]);
+  };
+
+  
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Todo List</h1>
+      <TodoForm addTodo={addTodo} />
       <Todos todos={todos} />
     </div>
   );
