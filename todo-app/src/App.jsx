@@ -13,12 +13,19 @@ function App() {
     setTodos([...todos, todo]);
   };
 
-  
+  const toggleTodo = (id) => {
+    setTodos(
+      todos.map(todo =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
   return (
     <div style={styles.container}>
       <h1 style={styles.title}>My Todo List</h1>
       <TodoForm addTodo={addTodo} />
-      <Todos todos={todos} />
+      <Todos todos={todos} toggleTodo={toggleTodo} />
     </div>
   );
 }
