@@ -1,11 +1,11 @@
 import React from 'react';
 import TodoItem from './TodoItem';
 
-const Todos = ({ todos }) => {
+const Todos = ({ todos, toggleTodo }) => {
   return (
     <div style={styles.container}>
       {todos.map(todo => (
-        <TodoItem key={todo.id} todo={todo} />
+        <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} />
       ))}
     </div>
   );
